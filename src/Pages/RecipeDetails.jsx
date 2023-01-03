@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import copy from 'clipboard-copy';
+import { Link } from 'react-router-dom';
+import profileIcon from '../images/profileIcon.svg';
 import RecipesContext from '../Context';
 import RecipeDetailsCard from '../Components/RecipeDetailsCard';
 import RecommendedRecipes from '../Components/RecommendedRecipes';
@@ -114,6 +116,14 @@ export default function RecipeDetails({ match: { params: { id } } }) {
     <section>
       <div className="title-card">
         <h1>Recipe Details</h1>
+        <Link to="/profile">
+          <img
+            className="profile-icon"
+            src={ profileIcon }
+            data-testid="profile-top-btn"
+            alt="profile"
+          />
+        </Link>
       </div>
       {!loading && (
         <section>

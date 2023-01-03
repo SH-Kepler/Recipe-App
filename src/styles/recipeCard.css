@@ -38,7 +38,11 @@ body {
     display: flex;
     font-family: Peralta , cursive;
     height: 45px;
-    justify-content: center;
+    justify-content: space-evenly;
+  }
+
+  .title-card h1 {
+    margin-top: 7px;
   }
 
   .recipe-card-ingredients {
